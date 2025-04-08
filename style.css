@@ -1,0 +1,212 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #1d1d1d; /* dark background */
+    color: #f0f0f0; /* light text */
+}
+
+.site-header {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: url('bg.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Dark overlay for better contrast */
+.site-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(23, 23, 23, 0.7);
+}
+
+.site-header .container {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+}
+
+.site-header h1 {
+    margin-bottom: 0; /* Adjust as needed */
+    /* Optional bee accent for headings */
+    color: #ff8c00; /* honey yellow */
+}
+
+.site-header p {
+    margin-top: 0; /* Adjust as needed */
+    color: #cccccc;
+}
+
+main.site-content {
+    padding: 20px;
+}
+
+/* Card container styling */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Cards updated to dark theme with bee accents */
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+    background-color: #2b2b2b;
+    border: 1px solid #484848;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #e27f07;  /* bee yellow for headings */
+}
+
+.card p {
+    margin: 0;
+    font-size: 1em;
+    color: #ddd;
+}
+
+/* Responsive: 2 cards per row for smaller screens */
+@media (max-width: 900px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* Responsive: 1 card per row for very small screens */
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+.site-authors {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+}
+
+.site-authors .container {
+    text-align: center;
+}
+
+.site-authors h2 {
+    margin: 0 0 20px;
+    color: #ff8c00;
+}
+
+.site-authors .author {
+    margin-bottom: 20px;
+}
+
+.site-authors .author h4 {
+    margin: 10px 0;
+    color: #c67a1d;
+}
+
+.site-authors .author p {
+    margin: 0;
+    color: #ddd;
+}
+
+/* Highlight Section layout */
+.highlight-section {
+    padding: 40px 20px;
+    background-color: #222;
+}
+
+.split-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row;
+}
+
+/* Set each to 50% width */
+.text-content {
+    flex: 0 0 50%;
+    color: #f0f0f0;
+    order: 1;
+    text-align: left; /* Align text to the left */
+}
+
+.text-content h2 {
+    margin-bottom: 15px;
+    color: #ff8c00;
+}
+
+.text-content p {
+    color: #ddd;
+}
+
+.image-content {
+    flex: 0 0 50%;
+    order: 2;
+    text-align: right; /* Align image to the right */
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #484848;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .split-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image-content {
+        margin-top: 20px;
+        text-align: center;
+        flex: 0 0 auto;
+    }
+    .text-content {
+        flex: 0 0 auto;
+    }
+}
+
+.bee-species {
+    background-color: #222;
+    border: 1px solid #525252;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.bee-species h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.bee-species ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.bee-species li {
+    padding: 5px 0;
+    border-bottom: 1px solid #525252;
+}
+.bee-species li:last-child {
+    border-bottom: none;
+}
