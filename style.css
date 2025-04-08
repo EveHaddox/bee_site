@@ -135,15 +135,15 @@ main.site-content {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-direction: row;
+    flex-direction: row; /* Ensures side-by-side layout */
 }
 
-/* Set each to 50% width */
+/* Text content on the left */
 .text-content {
-    flex: 0 0 50%;
+    flex: 0 0 48%;
     color: #f0f0f0;
-    order: 1;
-    text-align: left; /* Align text to the left */
+    order: 1; /* Explicitly positions text on the left */
+    text-align: left;
 }
 
 .text-content h2 {
@@ -155,10 +155,11 @@ main.site-content {
     color: #ddd;
 }
 
+/* Image content on the right */
 .image-content {
-    flex: 0 0 50%;
-    order: 2;
-    text-align: right; /* Align image to the right */
+    flex: 0 0 48%;
+    order: 2; /* Explicitly positions image on the right */
+    text-align: right;
 }
 
 .image-content img {
@@ -166,6 +167,7 @@ main.site-content {
     height: auto;
     border: 1px solid #484848;
     display: block;
+    margin-left: auto; /* Helps align to the right */
 }
 
 /* Responsive adjustments */
