@@ -145,6 +145,7 @@ main.site-content {
     color: #f0f0f0;
     order: 1; /* Explicitly positions text on the left */
     text-align: left;
+    margin-right: 10px; /* reduce gap between text and image on larger screens */
 }
 
 .text-content h2 {
