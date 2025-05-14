@@ -226,37 +226,6 @@ main.site-content {
     text-align: center;
 }
 
-.search-bar {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.search-bar input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 200px;
-}
-
-.search-bar button {
-    padding: 10px 20px;
-    background-color: #ff8c00;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: #e27f07;
-}
-.search-bar button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
-}
-
 /* Mesmerizing Section */
 .mesmerizing {
     position: relative;
@@ -366,6 +335,8 @@ main.site-content {
 /* Style images to mimic cards */
 .photo-gallery .gallery img {
     flex: 1 1 calc(33.333% - 20px);
+    max-width: 100%;
+    max-height: 700px;
     height: auto;
     border: 1px solid #484848;
     border-radius: 4px;
@@ -374,4 +345,159 @@ main.site-content {
 
 .photo-gallery .gallery img:hover {
     transform: scale(1.1);
+}
+
+.quiz {
+    background-color: #2b2b2b;
+    border: 1px solid #525252;
+    border-radius: 4px;
+    padding: 40px 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.quiz .container h2 {
+    color: #ff8c00;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.quiz .container p {
+    color: #ddd;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.quiz-btn {
+    background-color: #444;
+    color: #f0f0f0;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+#quiz-feedback {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff8c00;
+    margin-top: 10px;
+}
+
+
+/* Interactive Cards Section */
+.interactive-cards {
+    padding: 20px;
+    background-color: #2b2b2b;
+}
+
+/* Card Container with Background and Spacing */
+.interactive-cards .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    background-color: #2b2b2b; /* Matching section background */
+    padding: 20px;
+}
+
+/* Interactive Card Styling */
+.interactive-cards .card-container .card {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #3a3a3a;
+    border: 1px solid #484848;
+    border-radius: 4px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.interactive-cards .card-container .card:hover {
+    transform: scale(1.02);
+    background-color: #444;
+}
+
+.interactive-cards .card-container .card h2 {
+    margin: 0 0 10px;
+    color: #ff8c00;
+}
+
+.interactive-cards .card-container .card p {
+    margin: 0;
+    color: #ddd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .interactive-cards .card-container .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .interactive-cards .card-container .card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #2b2b2b;
+    color: #ddd;
+    margin: 10% auto;
+    padding: 20px;
+    border: 2px solid #484848;
+    border-radius: 4px;
+    width: 80%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+    color: #ff8c00;
+    border-bottom: 1px solid #484848;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ff8c00;
 }

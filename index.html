@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Bees</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/bee.png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>All About Bees</h1>
+            <p>Discover the fascinating world of bees &amp; their essential role in nature.</p>
+        </div>
+    </header>
+
+    <main class="interactive-cards">
+        <div class="card-container">
+            <div class="card" onclick="openModal('introduction')">
+                <h2>Introduction</h2>
+                <p>Bees are essential insects known for their role in pollination and honey production.</p>
+            </div>
+            <div class="card" onclick="openModal('importance')">
+                <h2>Importance of Bees</h2>
+                <p>By transferring pollen from one flower to another, bees help maintain biodiversity and food supplies.</p>
+            </div>
+            <div class="card" onclick="openModal('species')">
+                <h2>Bee Species</h2>
+                <p>There are thousands of bee species, each playing a unique role in nature.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for displaying detailed article content -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalArticleContent"></div>
+        </div>
+    </div>
+
+    <script>
+        const articles = {
+            introduction: `<article>
+            <h2>Introduction</h2>
+            <p>Bees are not only fascinating insects, but a cornerstone of natural ecosystems and agriculture. From ancient times when bees were revered in myths and legends, to modern scientific discoveries about their behavior and biology, these insects have captivated human interest.</p>
+            <p>They live in intricately organized colonies where every bee has a role, contributing to the survival of the hive through complex communication methods like the waggle dance. The social structure within a beehive is a marvel of natural engineering, demonstrating efficiency and cooperation that has inspired technological innovations.</p>
+            <p>This article delves into the rich world of bees, exploring their evolution, biological traits, and the behavioral intricacies that allow them to thrive in diverse environments. Learn about the critical roles bees play in ecosystems around the world, and why their survival is essential to both nature and humanity.</p>
+            </article>`,
+            importance: `<article>
+            <h2>Importance of Bees</h2>
+            <p>Bees are indispensable to life on Earth due to their role in pollination. They transfer pollen between plants, enabling the reproduction of a vast array of flora, which in turn supports food production and the maintenance of biodiversity.</p>
+            <p>Their pollination activities benefit agricultural crops and wild plants alike, ensuring that many of our essential foods and natural landscapes continue to flourish. Without bees, many plant species would struggle to survive, leading to economic and ecological challenges on a global scale.</p>
+            <p>This article examines the multifaceted importance of bees, from their economic impact on agriculture to their role in sustaining healthy ecosystems. Understand the consequences of declining bee populations and the measures needed to protect these irreplaceable insects, ensuring the longevity of our natural resources.</p>
+            </article>`,
+            species: `<article>
+            <h2>Bee Species</h2>
+            <p>The world of bees is incredibly diverse, with over 20,000 species ranging from solitary bees to the highly social honeybees. Each species has evolved unique adaptations that allow it to thrive in specific ecological niches.</p>
+            <p>Honeybees, known for their intricate hive structures and sophisticated communication methods, have been studied extensively for their social behaviors. In contrast, solitary bees such as mason bees exhibit distinct life cycles and environmental interactions that are equally vital to ecosystem health.</p>
+            <p>This article provides an in-depth look at the rich diversity among bee species. It explores the biology, habitat requirements, and contributions of various bees to the pollination process. Additionally, it discusses the conservation challenges faced by many species and the steps being taken to preserve their habitats in a rapidly changing world.</p>
+            </article>`
+        };
+
+        function openModal(articleKey) {
+            document.getElementById("modalArticleContent").innerHTML = articles[articleKey] || '';
+            document.getElementById("detailModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("detailModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("detailModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <section class="highlight-section">
+        <div class="container split-layout">
+            <div class="text-content">
+                <h2>Discover the Wonders</h2>
+                <p>Explore the fascinating details of bee life and learn about their essential role in our ecosystem. Gain insight into their behaviors, habitats, and contributions to nature.</p>
+            </div>
+            <div class="image-content">
+                <img src="bg.jpg" alt="Bee in action">
+            </div>
+        </div>
+    </section>
+
+    <section class="bee-species card">
+        <div class="container">
+            <h2>Bee Species List</h2>
+            <ul>
+                <li>Honey Bee (Apis mellifera)</li>
+                <li>Bumble Bee (Bombus spp.)</li>
+                <li>Carpenter Bee (Xylocopa spp.)</li>
+                <li>Leafcutter Bee (Megachile spp.)</li>
+                <li>Mining Bee (Andrena spp.)</li>
+                <li>Mason Bee (Osmia spp.)</li>
+                <li>Sweat Bee (Halictidae)</li>
+                <li>Stingless Bee (Meliponini)</li>
+                <li>Blue Orchard Bee (Osmia lignaria)</li>
+                <li>Long-tongued Bee (Eucerini)</li>
+            </ul>
+        </div>
+    </section>
+
+    <main class="site-content alternate">
+        <div class="card-container">
+            <div class="card">
+                <h2>Honey Production</h2>
+                <p>Discover the journey from nectar to honey. Learn about the meticulous process bees use to craft this natural sweetener.</p>
+            </div>
+            <div class="card">
+                <h2>Pollination Power</h2>
+                <p>Explore how bees contribute to plant reproduction, ensuring the cycle of life through effective pollination techniques.</p>
+            </div>
+            <div class="card">
+                <h2>Unique Bee Behaviors</h2>
+                <p>Dive into the intriguing habits of bees, including their famous waggle dance and innovative foraging strategies.</p>
+            </div>
+            <div class="card">
+                <h2>Bee Conservation</h2>
+                <p>Understand why protecting bees is crucial to our environment and discover ways to support bee-friendly initiatives.</p>
+            </div>
+            <div class="card">
+                <h2>Global Buzz</h2>
+                <p>Learn about bee species from across the globe and how these remarkable insects adapt to diverse ecosystems.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="mesmerizing">
+        <div class="mesmerizing-content">
+            <h2>Mesmerizing Nature</h2>
+            <p>Experience the captivating blend of a stunning background image with engaging text overlay.</p>
+        </div>
+    </section>
+
+    <section class="bee-videos">
+        <div class="container">
+            <h2>Bee Videos</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/v6tUWk7vC6g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yKihtly7SVg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <main class="site-content alternate">
+        <div class="card-container">
+            <div class="card">
+                <h2>Bee-Friendly Gardening Tips</h2>
+                <p>Plant native flowers, avoid pesticides, and provide water sources to attract bees to your garden.</p>
+            </div>
+            <div class="card">
+                <h2>Threats to Bees</h2>
+                <p>Learn about the dangers bees face, including habitat loss, pesticides, and climate change.</p>
+            </div>
+            <div class="card">
+                <h2>Conservation Efforts</h2>
+                <p>Explore initiatives and strategies designed to protect bee populations and their natural habitats.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="photo-gallery">
+        <div class="container">
+            <div class="gallery">
+                <img src="img1.png" alt="Bee 1">
+                <img src="img2.png" alt="Bee 2">
+                <img src="img3.jpg" alt="Bee 3">
+            </div>
+        </div>
+    </section>
+
+    <section class="quiz">
+        <div class="container">
+            <h2>Quiz Time</h2>
+
+            <div class="quiz-item">
+                <p>What is the scientific name of the honey bee?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" data-answer="wrong">Bombus terrestris</button>
+                    <button class="quiz-btn" data-answer="wrong">Xylocopa virginica</button>
+                    <button class="quiz-btn" data-answer="correct">Apis mellifera</button>
+                    <button class="quiz-btn" data-answer="wrong">Osmia bicornis</button>
+                </div>
+                <div id="quiz-feedback1"></div>
+                <script>
+                    const quizItem1 = document.currentScript.parentElement;
+                    quizItem1.querySelectorAll('.quiz-btn').forEach(button => {
+                        button.addEventListener('click', () => {
+                            quizItem1.querySelectorAll('.quiz-btn').forEach(btn => {
+                                btn.style.backgroundColor = "";
+                            });
+                            const feedback = quizItem1.querySelector('#quiz-feedback1');
+                            if (button.dataset.answer === "correct") {
+                                button.style.backgroundColor = "green";
+                                feedback.textContent = "Correct! The scientific name of the honey bee is Apis mellifera.";
+                            } else {
+                                button.style.backgroundColor = "red";
+                                quizItem1.querySelectorAll('.quiz-btn').forEach(btn => {
+                                    if (btn.dataset.answer === "correct") {
+                                        btn.style.backgroundColor = "green";
+                                    }
+                                });
+                                feedback.textContent = "Incorrect. The correct answer is Apis mellifera.";
+                            }
+                        });
+                    });
+                </script>
+            </div>
+
+            <div class="quiz-item">
+                <p>What substance do bees primarily use to create honey?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" data-answer="wrong">Pollen</button>
+                    <button class="quiz-btn" data-answer="correct">Nectar</button>
+                    <button class="quiz-btn" data-answer="wrong">Water</button>
+                    <button class="quiz-btn" data-answer="wrong">Honey</button>
+                </div>
+                <div id="quiz-feedback2"></div>
+                <script>
+                    const quizItem2 = document.currentScript.parentElement;
+                    quizItem2.querySelectorAll('.quiz-btn').forEach(button => {
+                        button.addEventListener('click', () => {
+                            quizItem2.querySelectorAll('.quiz-btn').forEach(btn => {
+                                btn.style.backgroundColor = "";
+                            });
+                            const feedback = quizItem2.querySelector('#quiz-feedback2');
+                            if (button.dataset.answer === "correct") {
+                                button.style.backgroundColor = "green";
+                                feedback.textContent = "Correct! Bees use nectar to create honey.";
+                            } else {
+                                button.style.backgroundColor = "red";
+                                quizItem2.querySelectorAll('.quiz-btn').forEach(btn => {
+                                    if (btn.dataset.answer === "correct") {
+                                        btn.style.backgroundColor = "green";
+                                    }
+                                });
+                                feedback.textContent = "Incorrect. The correct answer is Nectar.";
+                            }
+                        });
+                    });
+                </script>
+            </div>
+
+            <div class="quiz-item">
+                <p>How do bees communicate the location of food?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" data-answer="correct">Dance</button>
+                    <button class="quiz-btn" data-answer="wrong">Sound</button>
+                    <button class="quiz-btn" data-answer="wrong">Color</button>
+                    <button class="quiz-btn" data-answer="wrong">Smell</button>
+                </div>
+                <div id="quiz-feedback3"></div>
+                <script>
+                    const quizItem3 = document.currentScript.parentElement;
+                    quizItem3.querySelectorAll('.quiz-btn').forEach(button => {
+                        button.addEventListener('click', () => {
+                            quizItem3.querySelectorAll('.quiz-btn').forEach(btn => {
+                                btn.style.backgroundColor = "";
+                            });
+                            const feedback = quizItem3.querySelector('#quiz-feedback3');
+                            if (button.dataset.answer === "correct") {
+                                button.style.backgroundColor = "green";
+                                feedback.textContent = "Correct! Bees communicate through a dance known as the waggle dance.";
+                            } else {
+                                button.style.backgroundColor = "red";
+                                quizItem3.querySelectorAll('.quiz-btn').forEach(btn => {
+                                    if (btn.dataset.answer === "correct") {
+                                        btn.style.backgroundColor = "green";
+                                    }
+                                });
+                                feedback.textContent = "Incorrect. The correct answer is Dance.";
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <section class="site-authors">
+        <div class="container">
+            <h2>Authors</h2>
+            <article class="author">
+                <h4>Aleks Majka, Alkex Dolińska, Michalina Przywecka, Marceli Dziepak, Maja Górnik</h4>
+                <p>Members of the project</p>
+            </article>
+        </div>
+    </section>
+</body>
+</html>
