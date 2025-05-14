@@ -156,19 +156,13 @@ main.site-content {
     color: #ddd;
 }
 
-/* Image content on the right */
-.image-content {
-    flex: 0 0 48%;
-    order: 2; /* Explicitly positions image on the right */
-    text-align: right;
-}
-
+/* Keep the image within its container */
 .image-content img {
-    width: auto;
+    max-width: 100%;
     height: auto;
     border: 1px solid #484848;
     display: block;
-    margin: 0 auto; /* Centers the image horizontally in the div */
+    margin: 0 auto;
 }
 
 .bee-species {
@@ -298,14 +292,18 @@ main.site-content {
 
 /* Bee Videos Section */
 .bee-videos {
-    width: 80%;
-    padding: 40px 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
     border-radius: 4px;
     margin: 20px auto;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .bee-videos iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
     border: 1px solid #484848;
     border-radius: 4px;
 }
